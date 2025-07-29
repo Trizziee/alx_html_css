@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Object.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('css_advanced/Object.png') center/cover no-repeat;
   color: white;
   padding: 2rem;
   text-align: center;
