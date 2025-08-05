@@ -1,88 +1,158 @@
-/* Holberton Icon Font - You must include the font files and a stylesheet */
-@font-face {
-    font-family: 'holberton_school-icon';
-    src: url('fonts/holberton_school-icon.eot');
-    src: url('fonts/holberton_school-icon.eot?#iefix') format('embedded-opentype'),
-         url('fonts/holberton_school-icon.woff') format('woff'),
-         url('fonts/holberton_school-icon.ttf') format('truetype'),
-         url('fonts/holberton_school-icon.svg#holberton_school-icon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+:root {
+    --primary-color: #FF6565;
+    --text-color: #FFFFFF;
+    --background-color: #000000;
 }
 
-[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
-    font-family: 'holberton_school-icon';
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.hero {
+    background-image: url('images/hero_headphones.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: .2em;
 }
 
-/* Assume the following are from the demo page */
-.holberton_school-icon-signal:before { content: "\e900"; }
-.holberton_school-icon-headphones:before { content: "\e901"; }
-.holberton_school-icon-music:before { content: "\e902"; }
-.holberton_school-icon-video:before { content: "\e903"; }
-
-
-/* What We Do Section */
-.what-we-do {
-    text-align: center;
-    padding: 80px 0;
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
-.section-title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.section-description {
+.logo img {
+    height: 40px; /* Adjust as needed */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.hero-content {
+    margin-top: 100px; /* Adjust spacing as needed */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.hero-content p:first-of-type {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
     max-width: 700px;
-    margin: 0 auto 50px;
+    margin: 0 auto;
+}
+
+.what-we-do {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+.what-we-do h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.what-we-do p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 20px auto 50px auto;
     line-height: 1.5;
 }
 
-.card-container {
+.icon-cards {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .card {
-    flex: 1;
+    max-width: 250px;
     text-align: center;
 }
 
 .card span {
-    font-size: 80px;
+    font-size: 6rem;
     color: var(--primary-color);
 }
 
-.card-title {
-    font-size: 1.5em;
-    margin: 20px 0 10px;
+.card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.card-text {
-    font-size: 0.9em;
-    line-height: 1.5;
+.card p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    line-height: 1.4;
 }
 
-/* Responsive design for mobile */
-@media (max-width: 480px) {
-    .card-container {
-        flex-direction: column;
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
     }
-    
-    .card {
-        margin-bottom: 30px;
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p:first-of-type {
+        font-size: 1.2rem;
+    }
+
+    .what-we-do h2 {
+        font-size: 2rem;
     }
 }
