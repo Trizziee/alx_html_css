@@ -1,0 +1,275 @@
+:root {
+    --primary-color: #FF6565;
+    --text-color: #FFFFFF;
+    --background-color: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.hero {
+    background-image: url('images/hero_headphones.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.hero-content {
+    margin-top: 100px; /* Adjust spacing as needed */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.hero-content p:first-of-type {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.what-we-do {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+.what-we-do h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.what-we-do p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 20px auto 50px auto;
+    line-height: 1.5;
+}
+
+.icon-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 250px;
+    text-align: center;
+}
+
+.card span {
+    font-size: 6rem;
+    color: var(--primary-color);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.our-results {
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.our-results h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.our-results p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 20px auto 50px auto;
+    line-height: 1.5;
+}
+
+.results-pentagons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.pentagon-item {
+    background-color: var(--primary-color);
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pentagon-item p:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.pentagon-item p:last-child {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-us {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+.contact-us h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: none; /* Hide labels for a cleaner look */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--background-color);
+    background-color: transparent;
+    font-size: 16px;
+    color: var(--background-color);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.contact-form .cta-button {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p:first-of-type {
+        font-size: 1.2rem;
+    }
+
+    .what-we-do h2,
+    .our-results h2,
+    .contact-us h2 {
+        font-size: 2rem;
+    }
+
+    .results-pentagons {
+        gap: 30px;
+    }
+
+    .pentagon-item {
+        width: 150px;
+        height: 150px;
+    }
+
+    .pentagon-item p:first-child {
+        font-size: 2rem;
+    }
+}
