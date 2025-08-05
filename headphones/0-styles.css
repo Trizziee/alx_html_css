@@ -1,172 +1,107 @@
 :root {
     --primary-color: #FF6565;
-    --text-color: #ffffff;
-    --background-color: #333333;
-    --overlay-color: rgba(0, 0, 0, 0.7);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --text-color: #FFFFFF;
+    --background-color: #000000;
 }
 
 body {
-    font-family: sans-serif;
-    background-color: var(--background-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
     color: var(--text-color);
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-color: var(--background-color);
 }
 
 .hero {
-    background-image: url('path/to/your/hero-image.jpg');
+    background-image: url('images/hero_headphones.jpg');
     background-size: cover;
     background-position: center;
-    position: relative;
-    padding: 50px 0;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.header-container {
     width: 100%;
-    height: 100%;
-    background-color: var(--overlay-color);
-    z-index: 1;
-}
-
-.hero .container {
-    position: relative;
-    z-index: 2;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5em;
+    padding: 20px 0;
 }
 
 .logo img {
-    height: 40px;
-    margin-right: 10px;
+    height: 40px; /* Adjust as needed */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
-}
-
-.nav-links a:hover,
-.nav-links a:active {
-    color: var(--primary-color);
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.hamburger-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 2em;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .hero-content {
-    text-align: center;
-    padding: 100px 0 50px;
+    margin-top: 100px; /* Adjust spacing as needed */
 }
 
 .hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+.hero-content p:first-of-type {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
-.call-to-action-btn {
-    display: inline-block;
-    padding: 15px 30px;
+.cta-button {
     background-color: var(--primary-color);
     color: var(--text-color);
-    text-decoration: none;
-    border-radius: 30px;
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
     font-weight: bold;
-    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px 0;
 }
 
-.call-to-action-btn:hover,
-.call-to-action-btn:active {
-    opacity: 0.9;
-}
-
-.bottom-text {
-    text-align: center;
-    font-size: 0.9em;
+.hero-description {
+    font-size: 1rem;
     line-height: 1.5;
-    padding-top: 50px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-/* Mobile View */
-@media (max-width: 480px) {
-    .navbar {
-        flex-wrap: wrap;
-    }
-
+@media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .nav-links li {
-        margin-bottom: 10px;
-    }
-
-    .hamburger-icon {
-        display: block;
-    }
-
-    .menu-toggle:checked ~ .nav-links {
-        display: flex;
+        display: none; /* Hide navigation links on mobile */
     }
 
     .logo {
-        flex-grow: 1;
-        justify-content: center;
+        margin: 0 auto; /* Center the logo on mobile */
     }
 
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 2.5rem;
     }
 
-    .hero-content p {
-        font-size: 1em;
+    .hero-content p:first-of-type {
+        font-size: 1.2rem;
     }
 }
